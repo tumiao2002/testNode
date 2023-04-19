@@ -14,6 +14,7 @@ import java.util.List;
 //@Component
 public interface ProjectDao
 {
+
     @Insert("insert INTO projects(NAME,path,createTime,updateTime,password) VALUES(#{name},#{path},#{createTime},#{updateTime},#{password});")
     int createProj(String name, String path, Date createTime, Date updateTime,String password);
     @Update("update projects set name = #{name},path = #{path},password = #{password},updateTime = #{updateTime} where pid = #{pid}")
